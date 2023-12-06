@@ -1,0 +1,16 @@
+name: CI
+on:
+  pull_request:
+  merge_group:
+  # Trigger on merges to `main` to allow `gradle/gradle-build-action` runs to write their caches.
+  # https://github.com/gradle/gradle-build-action#using-the-caches-read-only
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 60
+      - run: echo Done 
