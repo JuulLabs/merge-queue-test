@@ -10,6 +10,8 @@ jobs:
       # empty
 #      - run: echo ${{ github.event.pull_request.number }}
 
+      - run: echo ${{ github.ref }}
+
       - run: printenv
 
       - uses: mheap/github-action-required-labels@v5
