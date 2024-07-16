@@ -7,7 +7,11 @@ jobs:
   label:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.event.pull_request.number }}
+      # empty
+#      - run: echo ${{ github.event.pull_request.number }}
+
+      - run: printenv
+
       - uses: mheap/github-action-required-labels@v5
         with:
           mode: exactly
